@@ -3,16 +3,25 @@ const express = require("express");
 const app = express(); // create a backend application
 const PORT = 8383;
 
-// HTTP VERBS || ROUTES (or paths)
+let data = {
+  name: "james",
+};
+
+// Website enpoints (For sending back an HTML)
+
 app.get("/", (req, res) => {
-  console.log("YAY I HIT AN END POINT", req.method);
-  res.sendStatus(200);
-  //   res.send("This is the main page");
+  res.send("<h1>Home Page</h1>");
 });
 
 app.get("/dashboard", (req, res) => {
-  console.log("I am now in the dashboard");
-  res.send("hi");
+  res.send("<h1>Dashboard</h1>");
+});
+
+// TYPE 2 - API endpoints (When submittion happen)
+
+app.get("/api/data", (req, res) => {
+  console.log("This one was for data");
+  res.send(data);
 });
 
 app.listen(PORT, () => {
