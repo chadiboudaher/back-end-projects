@@ -9,3 +9,15 @@ Get http://localhost:8383/dashboard
 ### DATA ENDPOINT
 
 Get http://localhost:8383/api/data
+
+### ADDING A USER
+POST http://localhost:8383/api/data
+Content-Type: application/json
+
+{
+    "name": "gilgamesh"
+}
+
+### delete a user
+DELETE  http://localhost:8383/api/data
+Content-Type: application/json
