@@ -15,12 +15,18 @@ app.get("/", (req, res) => {
     style="background:pink;
     color:blue">
       <p>${JSON.stringify(data)}</p>
+      <a href="/dashboard">dashboard</a>
     </body>
     `);
 });
 
 app.get("/dashboard", (req, res) => {
-  res.send("<h1>Dashboard</h1>");
+  res.send(
+    `<body>
+      <h1>Dashboard</h1>
+      <a href="/">HomePage</a>
+    </body>`
+  );
 });
 
 // TYPE 2 - API endpoints (When submittion happen)
@@ -29,7 +35,7 @@ app.get("/dashboard", (req, res) => {
 
 app.get("/api/data", (req, res) => {
   console.log("This one was for data");
-  res.send(data);
+  res.status(599).send(data);
 });
 
 app.post("/api/data", (req, res) => {

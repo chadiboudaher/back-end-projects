@@ -1,0 +1,17 @@
+PS C:\Users\chadi\back-end-projects\nodejs> cd ..
+PS C:\Users\chadi\back-end-projects> git rm -r --cached nodejs/basic-backend/node_modules
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\chadi\back-end-projects> 
+# Node
+node_modules/
+
+# Env
+.env
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
