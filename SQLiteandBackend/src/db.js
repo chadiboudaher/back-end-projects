@@ -11,12 +11,13 @@ db.exec(`
     `);
 
 db.exec(`
-    CREATE TABLE todos (
-        id INTEGER PRIMARY KEY,
-        user_id INTEGER,
-        task completed BOOLEAN DEFAULT 0,
-        FOREIGN KEY(user_id) REFERENCES users(id)
-    )
-    `);
+  CREATE TABLE todos (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER,
+    task TEXT NOT NULL,
+    completed INTEGER DEFAULT 0,
+    FOREIGN KEY(user_id) REFERENCES users(id)
+  );
+`);
 
 export default db;

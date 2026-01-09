@@ -17,5 +17,30 @@ Content-Type: application/json
 
 {
     "username": "chadiboudaher7@gmail.com",
-    "password": "12312"
+    "password": "123123"
+}
+
+
+### FETCH all todos GET /TODOS (protected)
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY3OTc3OTkwLCJleHAiOjE3NjgwNjQzOTB9.zGpLfCsRlwdunQ5cBlYHPNkqymqQhksKP-j80_l_66Q
+
+
+### 
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY3OTc3OTkwLCJleHAiOjE3NjgwNjQzOTB9.zGpLfCsRlwdunQ5cBlYHPNkqymqQhksKP-j80_l_66Q
+Content-Type: application/json
+
+{
+    "task": "Finish coding the projects"
+}
+
+###
+PUT http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY3OTc3OTkwLCJleHAiOjE3NjgwNjQzOTB9.zGpLfCsRlwdunQ5cBlYHPNkqymqQhksKP-j80_l_66Q
+Content-Type: application/json
+
+{
+    "completed": 1,
+    "task": "WASSUPPPP"
 }
